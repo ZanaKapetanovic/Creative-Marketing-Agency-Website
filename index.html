@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--Student name: Zana Kapetanović
+    ID: 210302082
+    Department: Computer Sciences and Engineering
+    Project name: Creative Marketing Agency Website
+-->
+
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Creative Agency Website</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tailwind.css">
+    
+    <script src="script.js" defer></script>
+
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.2/css/fontawesome.min.css" rel="stylesheet"/>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/NoviLogoV2.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class='bx bx-x' onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">SERVICES</a></li>
+                    <li><a href="">REFERENCES</a></li>
+                    <li><a href="">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class='bx bx-menu' onclick="showMenu()"></i>
+        </nav>
+
+<div class="text">
+    <h1>Creative Digital <strong>Marketing Agency</strong></h1>
+    <p>We are here to help you improve your online reputation and<br>raise your business to the highest possible level!</br></p>
+    <a class="button" onclick="scrollToContactForm()">Contact us</a>
+</div>
+    </section>
+
+
+<!------About------->
+
+
+<section class="about"> 
+    <h2>WHY TO CHOOSE US</h2>
+    <h1>A step ahead in digital marketing.</h1>
+    <p>NeoWeb is a company that was created to offer the market the simplest and most creative solutions for business improvement.<br> We help you to raise your business to the highest possible level. The small but very strong NeoWeb team is the most important resource of our company.</br>We are here to celebrate joint successes with you.</p>
+   <!--<a href="index.html"><img src="images/team.png"></a>-->
+
+   <div class="section-about">
+    <div class="column">
+        <h3>Efficiency and commitment</h3>
+        <p>Our company specializes in dedicated work and efficient delivery of quality services in the shortest possible time.</p>
+    </div>
+    <div class="column">
+        <h3>Expertise and knowledge</h3>
+        <p>Providing valuable and expert advice, recommendations and technical support in order to resolve user doubts is of particular importance to us.</p>
+    </div>
+    <div class="column">
+        <h3>Positive feedback</h3>
+        <p>The primary focus of our business is aimed at customer satisfaction, which ensures a positive reputation and justifies the focus of the company.</p>
+    </div>
+   </div>
+
+</section>
+
+
+<!-----Services----->
+
+<section class="services">
+    <h2>Services</h2>
+    <h1>We are dedicated to the realization of your every idea through our services.</h1>
+    <p>Focus on the professionalism of services in order to improve customer satisfaction.</p>
+
+<div class="section-services">
+    <div class="col">
+        <img src="images/uxui.png">
+        <h3>UI/UX Design</h3>
+        <p>Focus on user satisfaction.</p>
+    </div>
+    <div class="col">
+        <img src="images/graphicdesign.png">
+        <h3>Graphic Design</h3>
+        <p>Striking visual identity.</p>
+    </div>
+    <div class="col">
+        <img src="images/webdev.png">
+        <h3>Web Development</h3>
+        <p>Your signature in the digital world.</p>
+    </div> 
+    <div class="col">
+        <img src="images/digitalmarketing.png">
+        <h3>Digital Marketing</h3>
+        <p>Effective reach to the target audience.</p>
+    </div> 
+   <!--<div class="col">
+        <h3>Copywriting</h3>
+        <p>The power of the written word in the marketing world.</p>
+    </div>
+    <div class="col">
+        <h3>Social Media</h3>
+        <p>Strong influence through social media.</p>
+    </div>-->
+</div>
+</section>
+
+
+<!----References/Testimonials---->
+
+<div class="container">
+    <div class="testimonial">
+        <h4>Our Clients</h4>
+        <h5>Your opinion and positive experience is very important to us.</h5>
+        <div class="content">
+            <div class="slide">
+                <img src="images/testi.jpg">
+                <p>Congratulations on the services of this company, all recommendations!</p>
+
+                <i class="bx bxs-quote-alt-left quote-icon"></i>
+
+                <div class="details">
+                    <span class="name">Jennifer Walker</span>
+                    <span class="company">Google</span>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/testi2.jpg">
+                <p>Amazing experience! I would recommend this company to anyone looking for quality services.</p>
+                <i class="bx bxs-quote-alt-left quote-icon"></i>
+                <div class="details">
+                    <span class="name">John Doe</span>
+                    <span class="company">Microsoft</span>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="images/testi3.jpg">
+                <p>Great team, excellent results! I'm impressed with their professionalism and dedication.</p>
+                <i class="bx bxs-quote-alt-left quote-icon"></i>
+                <div class="details">
+                    <span class="name">Jane Smith</span>
+                    <span class="company">Apple</span>
+                </div>
+            </div>
+            
+            <div id="next" class="bx bx-chevron-right"></div>
+            <div id="prev" class="bx bx-chevron-left"></div>
+        </div>
+    </div>
+</div>
+
+
+<!---Contact Form---->
+<h4>Contact us</h4>
+<form id="contact-form" onsubmit="return validateForm()">
+    <fieldset id="contact-fieldset">
+        
+        <legend>Let's get in touch!</legend>
+        <p>
+            <div class="input-container">
+                <div class="input-with-error">
+                <label>Full name:</label>
+                <input type="text" placeholder="Enter your name" id="full-name" onkeyup="validateName()">
+                <span class="error-message" id="name-error"></span>
+            </div>
+            </div>
+        </p>
+        <p>
+        <div class="input-container">
+            <div class="input-with-error">
+        <label>Phone No.</label>
+        <input type="tel" placeholder="123 456 7890" id="phone" onkeyup="validatePhone()">
+        <span class="error-message" id="phone-error"></span>
+        </div>
+        </div>
+        </p>
+        <p>
+            <div class="input-container">
+            <div class="input-with-error">
+        <label>E-mail address:</label>
+        <input type="email" name="email" placeholder="Enter your email address" id="email" onkeyup="validateEmail()">
+        <span class="error-message" id="email-error"></span>
+        </div>
+    </div>
+       </p>
+       <p>
+        <div class="input-container">
+            <div class="input-with-error">
+       <label>Write a message:</label>
+        <input type="text" name="msg" placeholder="Enter your message" id="message" onkeyup="validateMessage()">
+        <span class="error-message" id="message-error"></span>
+    </div>
+    </div>
+    </p>
+    </p>
+    <p>
+        <label>Country:</label>
+        <select name="where">
+            <option>Choose a country</option>
+            <option>Bosnia and Herzegovina</option>
+            <option>Croatia</option>
+            <option>Serbia</option>
+            <option>United States</option>
+            <option>Other</option>
+        </select>
+    </p>
+    <p>
+        <div class="input-container">
+            <div class="input-container">
+    <button type="submit">Submit</button>
+    <span class="error-message" id="submit-error" id="submit"></span>
+            </div> 
+</div>
+</p>
+    </fieldset>
+</form>
+
+
+<!----Footer---->
+ <footer class="tw-bg-gray-900 tw-py-11 tw-mt-7">
+    <div class="tw-container tw-mx-auto tw-px-2 tw-text-white">
+        <div class="tw-gap-4 tw-mx-auto tw-flex tw-justify-between">
+            <div class="tw-max-w-xs tw-mb-4 tw-ml-2 tw-mr-0">
+                <a href="/">
+                    <img
+                    class="tw-h-12"
+                    src="images/NoviLogoV2.png"
+                    alt=""/>
+                </a>
+                <!--<h2 class="tw-text-2xl tw-font-bold tw-text-white mb-4">NeoWeb</h2>-->
+                <p class="tw-font-light tw-text-gray-400">A strong commitment to quality, innovation and creativity makes the company NeoWeb d.o.o. a top choice if you are looking for the best creative agency for digital marketing.</p>
+            </div>
+            
+            <div class="tw-ml-0 tw-mr-11">
+                <h2 class="tw-text-2xl tw-mb-4 tw-text-white tw-font-extralight">Learn more</h2>
+                <ul class="tw-ml-0 tw-list-none">
+                    <li><a href="" class="tw-no-underline tw-text-gray-400 tw-font-sans">Home</a></li>
+                    <li><a href="" class="tw-no-underline tw-text-gray-400 tw-font-sans">About Us</a></li>
+                    <li><a href="" class="tw-no-underline tw-text-gray-400 tw-font-sans">Services</a></li>
+                    <li><a href="" class="tw-no-underline tw-text-gray-400 tw-font-sans">References</a></li>
+                    <li><a href="" class="tw-no-underline tw-text-gray-400 tw-font-sans">Contact</a></li>
+                </ul>
+            </div>
+            <div class="tw-mr-2 tw-ml-8">
+                <h2 class="tw-text-2xl tw-mb-4 tw-text-white tw-font-extralight">Follow us</h2>
+                <ul class="tw-flex tw-space-x-2 tw-list-none tw-text-4xl">
+                    <li><a href="">
+                        <i class="bx bxl-facebook-circle tw-text-gray-400"></i>
+                    </li></a>
+                    <li><a href="">
+                        <i class='bx bxl-instagram tw-text-gray-400'></i>
+                    </li></a>
+                    <li><a href="">
+                        <i class='bx bxl-linkedin tw-text-gray-400'></i>
+                    </li></a>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    <div class="tw-border-t tw-border-white tw-mt-9 tw-pt-4 tw-text-center tw-text-white tw-text-sm">
+            <p class="tw-mb-0">All Rights Reserved &copy; 2023 NeoWeb</p>
+    </div>
+ </footer>
+
+
+</body>
+</html>
